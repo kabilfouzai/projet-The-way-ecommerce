@@ -28,10 +28,11 @@ Aussi utilisation de postman pour les test des api parti backend
  ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Les principaux les principaux fonctions:
 
 
-<span style="color:orange;">Parti client </span>
+
+
+<font color="green"> Parti client </font>
 
 Source: https://prograide.com/pregunta/19405/comment-ajouter-de-la-couleur-au-fichier-readmemd-de-github
-
 
 1/permet aux client de navige de manier simple et tres facile  
 
@@ -47,9 +48,8 @@ Source: https://prograide.com/pregunta/19405/comment-ajouter-de-la-couleur-au-fi
 
 7)chaque client a un profile simple pour suivre tout les produit a passe;
 
-<span style="color:orange;">Parti admin </span>
 
-
+<font color="green"> Parti admin </font>
 
 1)Ajout et suppression et modification des produits
 
