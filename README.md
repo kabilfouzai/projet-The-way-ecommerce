@@ -61,5 +61,5 @@ Parti admin
 
 7)aussi l admin a un profile
 
-note bien dans le (parti front j ai utlilise un facke api produits pour le design de site marche bien tu peut le supprime lorsque tu ajout plusieur produit )
+- note bien dans le (parti front j ai utlilise un facke api produits pour le design de site marche bien tu peut le supprime lorsque tu ajout plusieur produit )
 
