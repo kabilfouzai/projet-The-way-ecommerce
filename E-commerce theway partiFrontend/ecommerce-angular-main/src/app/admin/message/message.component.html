@@ -1,0 +1,28 @@
+<app-sidenav></app-sidenav>
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">dashboard Message client </div>
+
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data position-absolute text-center">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>prenom</th>
+              <th>Email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let message of messageDetails">
+              <td scope="row">{{message.nom}}</td>
+              <td>{{message.sujet}}</td>
+              <td>{{message.email}}</td>
+              <td>{{message.message}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

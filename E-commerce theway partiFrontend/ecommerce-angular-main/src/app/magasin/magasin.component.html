@@ -1,0 +1,162 @@
+  <!-- <div class="container" [hidden]="orderFinished">
+  <div class="row">
+
+    <div class="col-lg-8">
+      <div class="input-group mb-3" style="margin-top: 15px;">
+        <input type="text"  class="form-control" placeholder="Search product" name="name" [(ngModel)]="name">
+        <button class="btn btn-danger" type="button" (click)="search()"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="padding-bottom: 40px;" *ngIf="!showSearch">
+  <div class="col-md-9">
+    <app-products #productsC [hidden]="orderFinished"></app-products>
+  </div>
+  message mta3 a3az produit
+  <div class="col-md-6 offset-3">
+    <app-orders #ordersC [hidden]="!orderFinished"></app-orders>
+  </div>
+</div>
+
+<div *ngIf="showSearch">
+  <div class="card-deck" style="padding-bottom: 40px;">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products let i = index;">
+      <div class="card text-center">
+        <div class="card-header" style="background-color: #bdc3c7;">
+          <h4>{{product.name}}</h4>
+        </div>
+
+        <div class="card-body">
+          <a (click)="sngleProduct(product.id)"><img class="card-img-top img-thumbnail"
+              style="width: 230px; height: 300px; cursor: pointer;" src={{product.pictureUrl}} alt="image"></a>
+          <h5 class="card-title" id="price">Price = {{product.price}}<i class="fas fa-dollar-sign"></i>
+            <button title="Information" id="btn" (click)=showUndoBtn(i) (click)="productInfo(product.id)">
+              <i class="fas fa-info-circle"></i></button>
+            <button title="View" id="btn" (click)="sngleProduct(product.id)"> <i class="fas fa-eye-slash"></i></button>
+          </h5>
+          <div class="modal" [attr.id]="'undoBtn'+i" *ngIf="showBtn===i && showMyContainerInfo" class="editBtn"
+            md-raised-button color="primary">
+            <div class="modal-content">
+              <span>{{product.description}}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+ <app-navbar></app-navbar>
+ <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg" role="document">
+         <div class="w-100 pt-1 mb-5 text-right">
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form action="" method="get" class="modal-content modal-body border-0 p-0">
+             <div class="input-group mb-2">
+                 <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                 <button type="submit" class="input-group-text bg-success text-light">
+                     <i class="fa fa-fw fa-search text-white"></i>
+                 </button>
+             </div>
+         </form>
+     </div>
+ </div>
+
+ <div class="container py-5">
+     <div class="row">
+
+      <div class="col-lg-3">
+        <br>
+        <h4 style="margin-left: 20px;  "> Avec <span style="color: rgb(0, 175, 0); font-weight: 400;">The way</span>  tous est disponible </h4>
+      </div>
+
+         <div class="col-lg-9" *ngIf="!showSearch">
+             <div class="row">
+                 <div class="col-md-6">
+                     <ul class="list-inline shop-top-menu pb-3 pt-1">
+                         <li class="list-inline-item">
+                          <a class="nav-link" style="font-size: x-large; font-weight: 500;"  ><button  mat-button [matMenuTriggerFor]="menu" >categories</button></a>
+                        </li>
+
+                     </ul>
+                 </div>
+                 <div class="col-md-6 pb-4">
+                  <div class="col-lg-8">
+                    <div class="input-group mb-3" style="margin-top: 15px;">
+                      <input type="text"  class="form-control" placeholder="Search product" name="name" [(ngModel)]="name">
+                      <button class="btn btn-danger" type="button" (click)="search()"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                 </div>
+             </div>
+             <div class="row">
+                 <ng-container *ngFor="let item of produitlitse ">
+                 <div class="col-md-4">
+                     <div class="card mb-4 product-wap rounded-0">
+                         <div class="card rounded-0">
+                             <img class="card-img rounded-0 img-fluid tt" src="{{item.image}}">
+                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                 <ul class="list-unstyled">
+                                     <li><a class="btn btn-success text-white mt-2"(click)="sngleProduct(product.id)" ><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2"  (click)="sngleProduct(product.id)"><i class="fas fa-cart-plus"></i></a></li>
+                                 </ul>
+                             </div>
+                         </div>
+                         <div class="card-body">
+                             <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;max-width: 100ch; "><a href="shop-single.html"  class="h3 text-decoration-none">{{item.title}}</a></h5>
+                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                 <li>M/L/X/XL</li>
+                                 <li class="pt-2">
+                                     <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                     <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                     <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                     <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                     <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                 </li>
+                             </ul>
+                             <p class="text-center mb-0">${{item.price}}</p>
+                         </div>
+                     </div>
+                 </div>
+                 </ng-container>
+             </div>
+          </div>
+          <div *ngIf="showSearch">
+            <div class="card-deck" style="padding-bottom: 40px;">
+              <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products let i = index;">
+                <div class="card text-center">
+                  <div class="card-header" style="background-color: #bdc3c7;">
+                    <h4>{{product.name}}</h4>
+                  </div>
+
+                  <div class="card-body">
+                    <a (click)="sngleProduct(product.id)"><img class="card-img-top img-thumbnail"
+                        style="width: 230px; height: 300px; cursor: pointer;" src={{product.pictureUrl}} alt="image"></a>
+                    <h5 class="card-title" id="price">Price = {{product.price}}<i class="fas fa-dollar-sign"></i>
+                      <button title="Information" id="btn" (click)=showUndoBtn(i) (click)="productInfo(product.id)">
+                        <i class="fas fa-info-circle"></i></button>
+                      <button title="View" id="btn" (click)="sngleProduct(product.id)"> <i class="fas fa-eye-slash"></i></button>
+                    </h5>
+                    <div class="modal" [attr.id]="'undoBtn'+i" *ngIf="showBtn===i && showMyContainerInfo" class="editBtn"
+                      md-raised-button color="primary">
+                      <div class="modal-content">
+                        <span>{{product.description}}</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
+     <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let cat of categories"
+        [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
+    </mat-menu>
+
+ </div>

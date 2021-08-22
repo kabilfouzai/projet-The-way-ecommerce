@@ -1,0 +1,23 @@
+<!-- Start Categories of The Month -->
+<section class="container py-5">
+  <div class="row text-center pt-3">
+      <div class="col-lg-6 m-auto">
+          <h1 class="h1">Nouvelle collection</h1>
+          <p>
+
+Les nouvelles collections sont disponibles en exclusivité au The way aux meilleurs prix
+          </p>
+      </div>
+  </div>
+  <div class="row tt">
+      <ng-container *ngFor="let item of produitlitse";>
+
+      <div class="col-12 col-md-4 p-5 mt-3" *ngIf="(item.id <4)">
+          <a href="#"><img   src="{{item.image}}"  class="rounded-circle img-fluid border"></a>
+          <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;" class="text-center mt-3 mb-3">{{item.title}}</h5>
+          <div style="margin-right:100px;"><p class="text-center"><a [routerLink]="['/magasin']" routerLinkActive="router-link-active"  class="btn btn-success">Magasin</a></p></div>
+      </div>
+  </ng-container>
+  </div>
+</section>
+<!-- End Categories of The Month -->

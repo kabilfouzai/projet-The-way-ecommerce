@@ -1,0 +1,29 @@
+<div class="container py-5 bg">
+  <div class="row py-5">
+      <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" #nom (ngModel)="nom" name="nom" id="nom" class="form-control" placeholder="Nom ">
+          </div>
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" #email (ngModel)="email" name="email" id="email" class="form-control"
+              placeholder="email">
+          </div>
+          <div class="form-group">
+            <label for="sujet">Sujet :</label>
+            <input type="text" #sujet (ngModel)="sujet" name="sujet" id="sujet" class="form-control"
+              placeholder="sujet">
+          </div>
+          <div class="form-outline mb-4">
+              <label class="form-label" for="message">Message :</label>
+              <textarea class="form-control" #message (ngModel)="message" name="message" id="message" rows="4" placeholder="message "></textarea>
+            </div>
+
+          <div class="form-group">
+            <input type="submit" value="Envoyer" class="btn btn-success ">
+          </div>
+        </form>
+
+  </div>
+</div>

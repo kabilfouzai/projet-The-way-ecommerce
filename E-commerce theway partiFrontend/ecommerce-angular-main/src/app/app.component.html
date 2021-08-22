@@ -1,0 +1,76 @@
+<style>
+  body {
+    font-family: initial;
+    font-size: 16px;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  a {
+    margin-right: 25px;
+    text-decoration: none;
+  }
+
+
+
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+
+</style>
+
+<app-nav></app-nav>
+<div class="toolbar"  role="banner" class="navbar navbar-expand-lg navbar-light shadow" >
+<div class="container d-flex justify-content-between align-items-center"  >
+  <a class="navbar-brand text-success logo h1 align-self-center" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+    WAY
+</a>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+  <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav" class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav" >
+    <a class="nav-link"  ><button class="nav-link" class="nav-item" mat-button [matMenuTriggerFor]="menu">categories <i class="fas fa-caret-down"></i></button></a>
+    <div class="flex-fill">
+        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active">Accueil</a>
+           </li>
+            <li class="nav-link">
+              <a type="button" (click)="login()" *ngIf="!user">
+                login
+              </a>
+              <a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
+                Profile <i class="fas fa-user"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/magasin']" routerLinkActive="router-link-active" >Magasin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/apropos']" routerLinkActive="router-link-active" >À propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active" >Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let cat of categories"
+      [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
+  </mat-menu>
+
+  <div class="spacer"></div>
+</div><br>
+</div>
+<router-outlet></router-outlet>
