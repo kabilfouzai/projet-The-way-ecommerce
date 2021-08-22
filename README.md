@@ -3,7 +3,7 @@ projet ecommerce realise par kabil fouzai pour société  The way center
 
 Development d'un site Web e-commerce pour société The Way Center,
 
-Les technology utilise 
+ ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Les technology utilise 
 
 Parti Front-end :Angular 
 
@@ -13,7 +13,7 @@ Base de données :Mysql
 
 <br />
 
-Les logiciel utilise :
+ ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Les logiciel utilise :
 
 Parti front: vs code.
 
@@ -25,7 +25,7 @@ Aussi utilisation de postman pour les test des api parti backend
 
 
 
-Les principaux les principaux fonctions:
+ ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Les principaux les principaux fonctions:
 
 
 
