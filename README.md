@@ -32,7 +32,6 @@ Aussi utilisation de postman pour les test des api parti backend
 
 <font color="green"> Parti client </font>
 
-Source: https://prograide.com/pregunta/19405/comment-ajouter-de-la-couleur-au-fichier-readmemd-de-github
 
 1/permet aux client de navige de manier simple et tres facile  
 
